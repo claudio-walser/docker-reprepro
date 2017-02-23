@@ -5,7 +5,7 @@ FROM debian:latest
 MAINTAINER Claudio Walser <claudio.walser@srf.ch>
 
 RUN apt-get update && apt-get upgrade -y; \
-	apt-get install -y gnupg reprepro openssh-server; \
+	apt-get install -y gnupg reprepro openssh-server expect; \
 	adduser --system --group --shell /bin/bash --uid 1000 --disabled-password reprepro;
 
 VOLUME ["/home/reprepro/.ssh"]
